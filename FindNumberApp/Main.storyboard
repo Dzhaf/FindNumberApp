@@ -231,11 +231,28 @@
                                     <action selector="pressButton:" destination="yWL-Wb-LoC" eventType="touchUpInside" id="jjZ-Cc-vl8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-E7-uYT">
+                                <rect key="frame" x="93" y="164" width="228" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sa2-CT-gQM">
+                                <rect key="frame" x="137" y="115" width="140" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TaN-pM-nrH"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <connections>
+                        <outlet property="nextDigit" destination="sa2-CT-gQM" id="cbu-Jj-MS5"/>
+                        <outlet property="statusLabel" destination="sc3-Mf-Po4" id="eKT-05-BAr"/>
+                        <outlet property="timerLabel" destination="Me0-E7-uYT" id="c70-0y-iRt"/>
                         <outletCollection property="buttons" destination="WXo-Wv-UdM" collectionClass="NSMutableArray" id="a0j-NL-ga0"/>
                         <outletCollection property="buttons" destination="PjJ-YL-dj6" collectionClass="NSMutableArray" id="XSq-fa-E3F"/>
                         <outletCollection property="buttons" destination="zDg-Rf-pjc" collectionClass="NSMutableArray" id="CJe-6X-ITK"/>
@@ -256,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INq-pV-du2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-722" y="40"/>
+            <point key="canvasLocation" x="-723.1884057971015" y="39.508928571428569"/>
         </scene>
     </scenes>
     <resources>

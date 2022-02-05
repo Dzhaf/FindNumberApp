@@ -60,12 +60,12 @@
 			children = (
 				5FC99E2327AC762200C85B55 /* AppDelegate.swift */,
 				5FC99E2527AC762200C85B55 /* SceneDelegate.swift */,
+				5F51272527AEB8730093E2A2 /* GameViewController.swift */,
+				5F51272727AEBDFD0093E2A2 /* Game.swift */,
 				5F51272327AEB07F0093E2A2 /* Main.storyboard */,
 				5FC99E2C27AC762400C85B55 /* Assets.xcassets */,
 				5FC99E2E27AC762400C85B55 /* LaunchScreen.storyboard */,
 				5FC99E3127AC762400C85B55 /* Info.plist */,
-				5F51272527AEB8730093E2A2 /* GameViewController.swift */,
-				5F51272727AEBDFD0093E2A2 /* Game.swift */,
 			);
 			path = FindNumberApp;
 			sourceTree = "<group>";

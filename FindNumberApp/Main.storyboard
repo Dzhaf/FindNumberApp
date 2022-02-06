@@ -366,17 +366,51 @@
             </objects>
             <point key="canvasLocation" x="202" y="23"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Time View Controller-->
         <scene sceneID="ibc-k3-MoE">
             <objects>
-                <viewController id="v0V-H4-pcV" sceneMemberID="viewController">
+                <viewController id="v0V-H4-pcV" customClass="SelectTimeViewController" customModule="FindNumberApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sau-ug-HvI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-IV-k22">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeCell" textLabel="83N-4k-IXJ" style="IBUITableViewCellStyleDefault" id="YhY-5y-Dbp">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YhY-5y-Dbp" id="ur7-dg-JR4">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83N-4k-IXJ">
+                                                    <rect key="frame" x="20" y="0.0" width="350" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="e5V-Mu-1R8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jB9-IV-k22" firstAttribute="top" secondItem="e5V-Mu-1R8" secondAttribute="top" id="7Et-gE-YvT"/>
+                            <constraint firstItem="e5V-Mu-1R8" firstAttribute="trailing" secondItem="jB9-IV-k22" secondAttribute="trailing" id="Jhj-3E-flb"/>
+                            <constraint firstItem="jB9-IV-k22" firstAttribute="leading" secondItem="e5V-Mu-1R8" secondAttribute="leading" id="Pvc-LJ-xlb"/>
+                            <constraint firstItem="e5V-Mu-1R8" firstAttribute="bottom" secondItem="jB9-IV-k22" secondAttribute="bottom" id="Yii-Wg-9yG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BGM-F5-OSS"/>
+                    <connections>
+                        <outlet property="tavleView" destination="jB9-IV-k22" id="YnF-s6-6VS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxH-iv-1lW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,7 +419,7 @@
         <!--Настройки-->
         <scene sceneID="qIo-gD-tLS">
             <objects>
-                <tableViewController id="gH9-gu-LDR" sceneMemberID="viewController">
+                <tableViewController id="gH9-gu-LDR" customClass="SettingsTableViewController" customModule="FindNumberApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Yrc-uq-h7J">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,6 +442,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emI-1z-QDi">
                                                     <rect key="frame" x="319" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+                                                    <connections>
+                                                        <action selector="changeTimerState:" destination="gH9-gu-LDR" eventType="valueChanged" id="RMy-Oz-9EW"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -446,7 +483,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="v0V-H4-pcV" kind="show" id="Zrk-X3-QEh"/>
+                                            <segue destination="v0V-H4-pcV" kind="show" identifier="selectTimeVC" id="Zrk-X3-QEh"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sSd-HD-7bu">
@@ -457,9 +494,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-QQ-1Yu">
-                                                    <rect key="frame" x="96" y="6" width="199" height="31"/>
+                                                    <rect key="frame" x="95.666666666666686" y="6.3333333333333321" width="199" height="30.999999999999996"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Настройки по умолчанию"/>
+                                                    <connections>
+                                                        <action selector="resetSettings:" destination="gH9-gu-LDR" eventType="touchUpInside" id="TAg-1G-1V3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -477,6 +517,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Настройки" id="mzJ-2X-bYz"/>
+                    <connections>
+                        <outlet property="switchTimer" destination="emI-1z-QDi" id="KOv-Rb-h06"/>
+                        <outlet property="timeGameLabel" destination="yp2-vD-5wS" id="duF-N6-Hw2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPd-JQ-XDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

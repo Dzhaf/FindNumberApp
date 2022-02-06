@@ -10,22 +10,28 @@
 		5F51272427AEB07F0093E2A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F51272327AEB07F0093E2A2 /* Main.storyboard */; };
 		5F51272627AEB8730093E2A2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51272527AEB8730093E2A2 /* GameViewController.swift */; };
 		5F51272827AEBDFD0093E2A2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51272727AEBDFD0093E2A2 /* Game.swift */; };
+		5F51272A27AFC5630093E2A2 /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51272927AFC5630093E2A2 /* SelectTimeViewController.swift */; };
+		5F51272C27AFC5AF0093E2A2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F51272B27AFC5AF0093E2A2 /* SettingsTableViewController.swift */; };
 		5FC99E2427AC762200C85B55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC99E2327AC762200C85B55 /* AppDelegate.swift */; };
 		5FC99E2627AC762200C85B55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC99E2527AC762200C85B55 /* SceneDelegate.swift */; };
 		5FC99E2D27AC762400C85B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC99E2C27AC762400C85B55 /* Assets.xcassets */; };
 		5FC99E3027AC762400C85B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC99E2E27AC762400C85B55 /* LaunchScreen.storyboard */; };
+		5FE2D3ED27AFDAA900BF07DC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2D3EC27AFDAA900BF07DC /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F51272327AEB07F0093E2A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5F51272527AEB8730093E2A2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5F51272727AEBDFD0093E2A2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5F51272927AFC5630093E2A2 /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		5F51272B27AFC5AF0093E2A2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5FC99E2027AC762200C85B55 /* FindNumberApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumberApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC99E2327AC762200C85B55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FC99E2527AC762200C85B55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5FC99E2C27AC762400C85B55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FC99E2F27AC762400C85B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FC99E3127AC762400C85B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE2D3EC27AFDAA900BF07DC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				5FC99E2C27AC762400C85B55 /* Assets.xcassets */,
 				5FC99E2E27AC762400C85B55 /* LaunchScreen.storyboard */,
 				5FC99E3127AC762400C85B55 /* Info.plist */,
+				5F51272927AFC5630093E2A2 /* SelectTimeViewController.swift */,
+				5F51272B27AFC5AF0093E2A2 /* SettingsTableViewController.swift */,
+				5FE2D3EC27AFDAA900BF07DC /* Settings.swift */,
 			);
 			path = FindNumberApp;
 			sourceTree = "<group>";
@@ -142,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FC99E2427AC762200C85B55 /* AppDelegate.swift in Sources */,
+				5F51272A27AFC5630093E2A2 /* SelectTimeViewController.swift in Sources */,
+				5F51272C27AFC5AF0093E2A2 /* SettingsTableViewController.swift in Sources */,
 				5F51272627AEB8730093E2A2 /* GameViewController.swift in Sources */,
+				5FE2D3ED27AFDAA900BF07DC /* Settings.swift in Sources */,
 				5FC99E2627AC762200C85B55 /* SceneDelegate.swift in Sources */,
 				5F51272827AEBDFD0093E2A2 /* Game.swift in Sources */,
 			);

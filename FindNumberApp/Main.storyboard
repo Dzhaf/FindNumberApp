@@ -49,7 +49,7 @@
                                             <color key="titleColor" systemColor="linkColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="o3c-8O-emj" kind="show" id="Kyz-IL-yBI"/>
+                                            <segue destination="95h-JF-vsG" kind="presentation" modalPresentationStyle="fullScreen" id="Kyz-IL-yBI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -360,11 +360,12 @@
                         <outletCollection property="buttons" destination="7tt-3t-CmJ" collectionClass="NSMutableArray" id="HsH-3g-2GV"/>
                         <outletCollection property="buttons" destination="r5J-hr-ZNj" collectionClass="NSMutableArray" id="YQa-CB-I1h"/>
                         <outletCollection property="buttons" destination="guu-7b-tba" collectionClass="NSMutableArray" id="CHV-nb-62u"/>
+                        <segue destination="95h-JF-vsG" kind="presentation" identifier="recordVC" modalPresentationStyle="fullScreen" id="w5H-Pu-J23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INq-pV-du2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="23"/>
+            <point key="canvasLocation" x="211" y="23"/>
         </scene>
         <!--Select Time View Controller-->
         <scene sceneID="ibc-k3-MoE">
@@ -529,18 +530,39 @@
         <!--Рекорд-->
         <scene sceneID="lQl-1a-Tdy">
             <objects>
-                <viewController id="o3c-8O-emj" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gbe-ma-ism">
+                <viewController id="o3c-8O-emj" customClass="RecordViewController" customModule="FindNumberApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gbe-ma-ism" customClass="rec">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGR-Qy-5ZP">
+                                <rect key="frame" x="164.33333333333334" y="435.33333333333331" width="61.333333333333343" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ntr-jh-8hf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HGR-Qy-5ZP" firstAttribute="centerX" secondItem="ntr-jh-8hf" secondAttribute="centerX" id="BGa-Mv-oCX"/>
+                            <constraint firstItem="HGR-Qy-5ZP" firstAttribute="centerY" secondItem="ntr-jh-8hf" secondAttribute="centerY" id="dvc-O5-ADq"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Рекорд" id="S9p-LR-WLT"/>
+                    <navigationItem key="navigationItem" title="Рекорд" id="S9p-LR-WLT">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="K2V-fm-EK3">
+                            <connections>
+                                <action selector="closeVC:" destination="o3c-8O-emj" id="kax-r7-pXS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordLabel" destination="HGR-Qy-5ZP" id="VhM-8B-8uJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aM3-Di-O2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="-664"/>
+            <point key="canvasLocation" x="210.76923076923077" y="-664.69194312796208"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TRL-7r-xsy">
@@ -560,7 +582,28 @@
             </objects>
             <point key="canvasLocation" x="-1615.3846153846152" y="22.748815165876778"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dj5-pb-Bn4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="95h-JF-vsG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g5M-N8-iQr">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o3c-8O-emj" kind="relationship" relationship="rootViewController" id="Ft3-zc-9LI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsB-c2-3vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-718.46153846153845" y="-664.69194312796208"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="w5H-Pu-J23"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

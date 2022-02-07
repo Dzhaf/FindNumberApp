@@ -9,6 +9,8 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    // MARK: - PROPERTIES
+    
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var nextDigit: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -21,6 +23,8 @@ class GameViewController: UIViewController {
         self.timerLabel.text = time.secondsToString()
         self.updateInfoGame(with: status)
     }
+    
+    // MARK: LIFE CYCLE
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -126,8 +130,8 @@ class GameViewController: UIViewController {
             self?.setupScreen()
         }
         
-        let showRecord = UIAlertAction(title: "Посмотреть рекорд", style: .default) { (_) in
-            
+        let showRecord = UIAlertAction(title: "Посмотреть рекорд", style: .default) { [weak self] (_) in
+            self?.performSegue(withIdentifier: "recordVC", sender: nil)
         }
         
         let menuAction = UIAlertAction(title: "Перейти в меню", style: .destructive) { [weak self] (_) in

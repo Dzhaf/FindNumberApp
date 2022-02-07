@@ -17,6 +17,7 @@
 		5FC99E2D27AC762400C85B55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FC99E2C27AC762400C85B55 /* Assets.xcassets */; };
 		5FC99E3027AC762400C85B55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC99E2E27AC762400C85B55 /* LaunchScreen.storyboard */; };
 		5FE2D3ED27AFDAA900BF07DC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2D3EC27AFDAA900BF07DC /* Settings.swift */; };
+		5FE2D3EF27B0077100BF07DC /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE2D3EE27B0077100BF07DC /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5FC99E2F27AC762400C85B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FC99E3127AC762400C85B55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FE2D3EC27AFDAA900BF07DC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5FE2D3EE27B0077100BF07DC /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5F51272927AFC5630093E2A2 /* SelectTimeViewController.swift */,
 				5F51272B27AFC5AF0093E2A2 /* SettingsTableViewController.swift */,
 				5FE2D3EC27AFDAA900BF07DC /* Settings.swift */,
+				5FE2D3EE27B0077100BF07DC /* RecordViewController.swift */,
 			);
 			path = FindNumberApp;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				5FC99E2427AC762200C85B55 /* AppDelegate.swift in Sources */,
 				5F51272A27AFC5630093E2A2 /* SelectTimeViewController.swift in Sources */,
 				5F51272C27AFC5AF0093E2A2 /* SettingsTableViewController.swift in Sources */,
+				5FE2D3EF27B0077100BF07DC /* RecordViewController.swift in Sources */,
 				5F51272627AEB8730093E2A2 /* GameViewController.swift in Sources */,
 				5FE2D3ED27AFDAA900BF07DC /* Settings.swift in Sources */,
 				5FC99E2627AC762200C85B55 /* SceneDelegate.swift in Sources */,
